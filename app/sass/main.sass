@@ -1,0 +1,600 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $blue
+	color: #fff
+
+body
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.4
+	font-family: $regular
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+ul, li, p, h1, h2, h3, h4, h5, address
+	margin: 0
+	padding: 0
+
+header
+	padding: 40px 0
+	.logo, .logo-text
+		display: inline-block
+		vertical-align: middle
+	.logo
+		margin: 0 10px 0 0
+	.logo-text
+		strong
+			font-family: $bold
+			font-size: 15px
+			text-transform: uppercase
+			line-height: 1.2
+		span
+			font-size: 12px
+			font-family: $regular
+			color: #585858
+	.wrapper-header-info
+		text-align: right
+		address, .header-work-time, .header-phone
+			display: inline-block
+			color: #333333
+		address, .header-work-time
+			font-size: 14px
+			font-family: $medium
+			text-transform: uppercase
+		address
+			margin: 0 0 0 30px
+			padding: 0 0 0 25px
+			background-image: url('../img/1-header/icon-map.svg')
+			background-repeat: no-repeat
+			background-size: contain
+		.header-work-time
+			margin: 0 0 0 20px
+			padding: 0 0 0 25px
+			background-image: url('../img/1-header/icon-time.svg')
+			background-repeat: no-repeat
+			background-size: contain
+		.header-phone
+			margin: 0 0 0 20px
+			padding: 0 0 0 30px
+			background-image: url('../img/1-header/icon-phone.svg')
+			background-repeat: no-repeat
+			background-size: 19.2px
+			background-position: 0 5px
+			font-size: 20px
+			a
+				color: #333333
+				font-family: $medium
+				span
+					font-family: $bold
+		.header-feedback
+			display: inline-block
+			margin: 0 0 0 30px
+			button
+				display: block
+				width: 187px
+				border: none
+				background-color: $blue
+				height: 40px
+				border-radius: 10px
+				font-size: 16px
+				font-family: $bold
+				color: #ffffff
+				cursor: pointer
+
+.menu-wrapper
+	margin: 32px 0 0 0
+	.types-help-menu
+		strong
+			font-family: $bold
+			text-transform: uppercase
+			display: inline-block
+			vertical-align: middle
+			margin: 0 0 0 5px
+	.menu
+		text-align: right
+		ul
+			list-style: none
+			li
+				display: inline-block
+				margin: 0 30px 0 0
+				&:last-child
+					margin: 0
+				a
+					color: #333333
+					text-transform: uppercase
+					font-family: $bold
+
+.header-slider-wrapper
+	.slider-item
+		position: relative
+		.wrapper-inner
+			position: absolute
+			width: 100%
+			z-index: 9
+			top: calc(50% - 127.5px) 
+			h2, h3
+				font-family: $bold
+				font-size: 50px
+				text-transform: uppercase
+			h2
+				color: $blue
+				line-height: 1
+			h3
+				color: #333333
+			p
+				font-family: $regular
+				font-size: 20px
+				margin: 10px 0 0 0
+			button
+				margin: 11px 0 0 0
+				height: 50px
+				background-color: #7166F1
+				color: #fff
+				width: 224px
+				border-radius: 10px
+				border: none
+				font-size: 16px
+				font-family: $bold
+				margin: 20px 0 0 0
+				cursor: pointer
+
+.types-help-wrapper
+	min-height: 905px
+	position: relative
+	background-color: rgba(245, 248, 255, 0.8)
+	background-image: url('../img/3-types-help-wrapper/bg.png')
+	background-repeat: no-repeat
+	background-position: 0 165px
+	.types-help-blocks
+		padding: 100px 0 0 0
+		.types-help-text
+			h2
+				font-family: $bold
+				font-size: 48px
+				text-transform: uppercase
+				color: $blue
+				margin: 30px 0 0 0
+		.types-help-item
+			width: 270px
+			height: 235px
+			box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1)
+			background: #ffffff
+			border-radius: 10px
+			padding: 80px 16px 19px 25px
+			margin: 10px 0 0 0
+			position: relative
+			transition: all 0.25s linear
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				opacity: 1
+				transition: all 0.25s linear
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				opacity: 0
+				transition: all 0.25s linear
+			&:hover
+				background: linear-gradient(90.21deg, #625CDA 0.14%, #615ED1 99.82%)
+				h3
+					color: #ffffff
+				p
+					color: #ffffff
+				&::before
+					opacity: 0
+				&::after
+					opacity: 1
+		.first-item
+			&::before
+				background-image: url('../img/3-types-help-wrapper/blocks-item/1.svg')
+				width: 34px
+				height: 51px
+				top: 25px
+				left: 34px
+			&::after
+				background-image: url('../img/3-types-help-wrapper/blocks-item/1-hover.svg')
+				width: 33px
+				height: 51px
+				top: 25px
+				left: 34px
+		.second-item
+			&::before
+				background-image: url('../img/3-types-help-wrapper/blocks-item/2.svg')
+				width: 31px
+				height: 51px
+				top: 25px
+				left: 35px
+			&::after
+				background-image: url('../img/3-types-help-wrapper/blocks-item/2-hover.svg')
+				width: 31px
+				height: 51px
+				top: 25px
+				left: 35px
+		.three-item
+			&::before
+				background-image: url('../img/3-types-help-wrapper/blocks-item/3.svg')
+				width: 27px
+				height: 52px
+				top: 25px
+				left: 38px
+			&::after
+				background-image: url('../img/3-types-help-wrapper/blocks-item/3-hover.svg')
+				width: 25px
+				height: 51px
+				top: 25px
+				left: 38px
+		.four-item
+			&::before
+				background-image: url('../img/3-types-help-wrapper/blocks-item/4.svg')
+				width: 18px
+				height: 51px
+				top: 25px
+				left: 41px
+			&::after
+				background-image: url('../img/3-types-help-wrapper/blocks-item/4-hover.svg')
+				width: 18px
+				height: 50px
+				top: 25px
+				left: 41px
+		.five-item
+			&::before
+				background-image: url('../img/3-types-help-wrapper/blocks-item/5.svg')
+				width: 50px
+				height: 36px
+				top: 33px
+				left: 25px
+			&::after
+				background-image: url('../img/3-types-help-wrapper/blocks-item/5-hover.svg')
+				width: 50px
+				height: 35px
+				top: 33px
+				left: 25px
+		.six-item
+			&::before
+				background-image: url('../img/3-types-help-wrapper/blocks-item/6.svg')
+				width: 50px
+				height: 35px
+				top: 33px
+				left: 25px
+			&::after
+				background-image: url('../img/3-types-help-wrapper/blocks-item/6-hover.svg')
+				width: 50px
+				height: 35px
+				top: 33px
+				left: 25px
+		.seven-item
+			&::before
+				background-image: url('../img/3-types-help-wrapper/blocks-item/7.svg')
+				width: 51px
+				height: 19px
+				top: 41px
+				left: 25px
+			&::after
+				background-image: url('../img/3-types-help-wrapper/blocks-item/7-hover.svg')
+				width: 48px
+				height: 19px
+				top: 41px
+				left: 25px
+		.eight-item
+			&::before
+				background-image: url('../img/3-types-help-wrapper/blocks-item/8.svg')
+				width: 34px
+				height: 50px
+				top: 25px
+				left: 32px
+			&::after
+				background-image: url('../img/3-types-help-wrapper/blocks-item/8-hover.svg')
+				width: 33px
+				height: 50px
+				top: 25px
+				left: 32px
+		.nine-item
+			&::before
+				background-image: url('../img/3-types-help-wrapper/blocks-item/9.svg')
+				width: 18px
+				height: 50px
+				top: 25px
+				left: 32px
+			&::after
+				background-image: url('../img/3-types-help-wrapper/blocks-item/9-hover.svg')
+				width: 18px
+				height: 50px
+				top: 25px
+				left: 32px
+		.ten-item
+			&::before
+				background-image: url('../img/3-types-help-wrapper/blocks-item/10.svg')
+				width: 36px
+				height: 51px
+				top: 25px
+				left: 32px
+			&::after
+				background-image: url('../img/3-types-help-wrapper/blocks-item/10-hover.svg')
+				width: 36px
+				height: 50px
+				top: 25px
+				left: 32px
+		.eleven-item
+			&::before
+				background-image: url('../img/3-types-help-wrapper/blocks-item/11.svg')
+				width: 21px
+				height: 51px
+				top: 25px
+				left: 32px
+			&::after
+				background-image: url('../img/3-types-help-wrapper/blocks-item/11-hover.svg')
+				width: 20px
+				height: 50px
+				top: 25px
+				left: 32px
+
+
+
+		h3
+			font-family: $bold
+			font-size: 16px
+			color: #333333
+		p
+			font-size: 15px
+			margin: 5px 0 0 0
+
+.department-wrapper
+	padding: 70px 0 70px 0
+	h2
+		font-family: $bold
+		font-size: 48px
+		text-transform: uppercase
+		color: $blue
+		position: relative
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			height: 2px
+			width: 200px
+			background-color: #7166F1
+			border-radius: 10px
+			top: 34px
+			left: -223px
+	.department
+		margin: 30px 0 0 0
+		.department-img
+			img
+				width: 100%
+		.department-description
+			.text-item
+				margin: 10px 0 0 0
+				&:nth-child(1)
+					margin: 0
+				h3
+					font-family: $demi
+					font-size: 19px
+					color: #333333
+				p
+					font-size: 15px
+					font-family: $regular
+					color: rgba(0, 0, 0, 0.7)
+					line-height: 23px
+	.department-icons
+		margin: 75px 0 0 0
+		text-align: center
+		.department-item
+			display: inline-block
+			margin: 0 53px
+			vertical-align: top
+			img
+				display: block
+				margin: 0 auto
+			h3
+				font-family: $bold
+				font-size: 15px
+				line-height: 18px
+				color: #333333
+				text-transform: uppercase
+				margin: 25px 0 0 0
+
+.reviews-wrapper
+	height: 536px
+	background-color: rgba(245, 248, 255, 0.80)
+	padding: 90px 0
+	h2
+		font-family: $bold
+		font-size: 48px
+		color: $blue
+		text-transform: uppercase
+		text-align: center
+	.reviews
+		margin: 30px 0 0 0
+		.reviews-item
+			border-radius: 10px
+			box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1)
+			background-color: #fff
+			padding: 30px
+			max-width: 530px
+			margin: 0 20px
+			background-image: url('../img/5-reviews/quotes.png')
+			background-repeat: no-repeat
+			background-position: 95% 15%
+			&:last-child
+				margin: 0
+			.reviews-item-header
+				img
+					display: inline-block
+				.reviews-item-header-name
+					display: inline-block
+					vertical-align: middle
+					margin: 0 0 0 10px
+					h4
+						font-family: $demi
+						font-size: 22px
+						line-height: 27px
+						color: #333333
+					span
+						font-family: $bold
+						font-size: 14px
+						color: #7166F1
+						line-height: 17px
+				.reviews-item-text
+					p
+						font-family: $regular
+						font-size: 17px
+						margin: 15px 0 0 0
+
+.feedback-wrap
+	padding: 70px 0 0 0
+	h2
+		font-family: $bold
+		font-size: 30px
+		line-height: 33px
+		color: $blue
+		text-transform: uppercase
+	h3
+		font-family: $bold
+		font-size: 22px
+		line-height: 24px
+		color: #000000
+		text-transform: uppercase
+		margin: 10px 0 0 0
+	p
+		font-family: $regular
+		font-size: 18px
+		color: #000000
+		line-height: 28px
+		margin: 20px 0 0 0
+	form
+		input[type="text"]
+			display: inline-block
+			width: 200px
+			height: 50px
+			padding: 0 10px 0 15px
+			color: #838383
+			border-radius: 10px
+			border: 2px solid #E6ECF8
+			margin: 20px 5px
+			font-family: $regular
+			font-size: 16px
+			&:nth-child(1)
+				margin: 0
+		textarea
+			width: 98%
+			height: 50px
+			border: 2px solid #E6ECF8
+			border-radius: 10px
+			padding: 10px 15px
+			font-size: 16px
+		input[type="submit"]
+			height: 50px
+			width: 224px
+			background-color: #7166F1
+			color: #ffffff
+			font-family: $bold
+			text-align: center
+			cursor: pointer
+			border-radius: 10px
+			margin: 20px 0 0 0
+	img
+		width: 100%
+
+.map
+	position: relative
+	.info-map-wrapper
+		width: 100%
+		position: absolute
+		top: 90px
+		.info-map
+			height: 250px
+			width: 370px
+			background-color: #fff
+			padding: 40px 20px 40px 60px
+			border-radius: 10px
+			box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1)
+			p
+				font-family: $regular
+				font-size: 20px
+			.info-map-address
+				position: relative
+				&::before
+					content: ''
+					display: block
+					position: absolute
+					width: 21px
+					height: 25px
+					background-image: url('../img/7-map/map.svg')
+					left: -30px
+					background-repeat: no-repeat
+			.info-map-phone
+				font-family: $bold
+				font-size: 20px
+				color: #333333
+				margin: 20px 0 0 0
+				display: inline-block
+				position: relative
+				&::before
+					content: ''
+					display: block
+					position: absolute
+					width: 24px
+					height: 24px
+					background-image: url('../img/7-map/phone.svg')
+					left: -30px
+					background-repeat: no-repeat
+			.info-map-mail
+				font-family: $regular
+				font-size: 20px
+				display: inline-block
+				margin: 20px 0
+				position: relative
+				&::before
+					content: ''
+					display: block
+					position: absolute
+					width: 25px
+					height: 21px
+					background-image: url('../img/7-map/mail.svg')
+					left: -31px
+					top: 6px
+					background-repeat: no-repeat
+			.info-map-work-time
+				position: relative
+				&::before
+					content: ''
+					display: block
+					position: absolute
+					width: 25px
+					height: 25px
+					background-image: url('../img/7-map/time.svg')
+					left: -30px
+					top: 3px
+					background-repeat: no-repeat
+
+@import "_other_pages/page"
+@import "media" // Always at the end

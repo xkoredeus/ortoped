@@ -1,0 +1,88 @@
+.preview
+    min-height: 386px
+    padding: 70px 0
+    background-image: url('../img/page/1-preview/bg.jpg')
+    h1
+        font-family: $bold
+        font-style: 35px
+        color: #ffffff
+        text-align: center
+        text-transform: uppercase
+    p
+        text-align: center
+        color: #ffffff
+        margin: 25px 0 0 0
+        font-size: 20px
+        font-family: $regular
+        line-height: 27px
+        font-weight: normal
+
+.breadcrumbs
+    padding: 25px 0
+    ul
+        li
+            display: inline-block
+            &:last-of-type
+                a
+                    background-color: #E6ECF8
+                    color: #000000
+            a
+                display: block
+                background-color: #3A84E7
+                color: #ffffff
+                height: 32px
+                padding: 0 15px
+                line-height: 32px
+                border-radius: 10px
+                font-family: $medium
+
+.info-blocks
+    background-image: url('../img/page/2-info-blocks/bg.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    padding: 50px 0 70px 0
+    background-attachment: fixed
+    .symptoms, .treatment
+        ul
+            padding: 0 0 0 20px
+            list-style: none
+            li
+                margin: 10px 0 0 0
+                font-size: 19px
+                line-height: 27px
+                color: rgba(0, 0, 0, 0.7)
+                position: relative
+                &::before
+                    content: ''
+                    display: block
+                    position: absolute
+                    width: 18px
+                    height: 18px
+                    background-image: url('../img/page/2-info-blocks/check.png')
+                    left: -25px
+                    top: 6px
+    .symptoms,.reasons, .treatment, .diagnostic, .photo-gallery-wrapper .photo-gallery
+        background-color: #fff
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1)
+        border-radius: 10px
+        padding: 31px 40px
+        h3
+            font-family: $bold
+            font-size: 35px
+            font-family: #333333
+            text-transform: uppercase
+    .reasons, .treatment, .diagnostic
+        margin: 40px 0 0 0
+        p
+            font-size: 19px
+            color: rgba(0, 0, 0, 0.7)
+            margin: 10px 0 0 0
+
+.photo-gallery-wrapper 
+    .photo-gallery
+        margin: 40px 0 0 0
+        h3
+            text-align: center
+        img
+            width: 100%
+            margin: 10px 0 0 0
