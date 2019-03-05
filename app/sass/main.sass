@@ -17,6 +17,7 @@ body
 	font-family: $regular
 	overflow-x: hidden
 	color: $text
+
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -595,6 +596,44 @@ header
 					left: -30px
 					top: 3px
 					background-repeat: no-repeat
+.footer
+	padding: 25px 0 30px
+	.logo
+		margin-right: 10px
+		display: block
+	.logo-text
+		strong
+			font-family: $bold
+			font-size: 15px
+			text-transform: uppercase
+			line-height: 1.2
+		span
+			font-size: 12px
+			font-family: $regular
+			color: #585858
+	&-phone
+		margin: 0 0 0 20px
+		padding: 0 0 0 30px
+		background-image: url('../img/1-header/icon-phone.svg')
+		background-repeat: no-repeat
+		background-size: 19.2px
+		background-position: 0 5px
+		font-size: 20px
+		a
+			color: #333333
+			font-family: $medium
+			span
+				font-family: $bold
+	&-mail
+		margin: 0 0 0 20px
+		padding: 0 0 0 30px
+		background-image: url('../img/7-map/mail.svg')
+		background-repeat: no-repeat
+		background-size: 19.2px
+		background-position: 0 5px
+		font-size: 18px
+		text-decoration: underline
+		
 
 @import "_other_pages/page"
 @import "media" // Always at the end
